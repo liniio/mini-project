@@ -1,0 +1,106 @@
+/* :root{
+
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background: #dadada;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.25s;
+}
+
+.image{
+    width: 22%;
+    height: 200px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.image:hover img{
+    transform: scale(1.2);
+}
+
+.gallery{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.8);
+    display: flex;
+    z-index: 1;
+    align-items: center;
+    color: #fff;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.8);
+    transition: 0.25s;
+}
+
+.close{
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 35px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.control{
+    font-size: 35px;
+    color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.control.prev{
+    left: 15px;
+}
+
+.control.next{
+    right: 15px;
+}
+
+.gallery.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+.gallery__inner{
+    width: 70%;
+    height: 70%;
+    margin: 0 auto;
+}
+
+.hide{
+    display: none;
+}
