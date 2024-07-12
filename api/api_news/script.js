@@ -7,7 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             const newsContainer = document.getElementById('news-container');
+            const loader = document.getElementById('loader');
+            const newsTitle = document.getElementById('news-title');
             const articles = data.articles;
+
+            // Hide loader and show news container
+            loader.style.display = 'none';
+            newsTitle.style.display = 'block';
+            newsContainer.style.display = '';
 
             // Initialize pagination
             $('#pagination').pagination({
