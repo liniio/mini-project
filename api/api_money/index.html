@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi tiền tệ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Chuyển đổi tiền tệ</h1>
+    <div class="currency-converter">
+        <div class="input-group">
+            <label for="sourceCurrency">Loại tiền nguồn:</label>
+            <select id="sourceCurrency">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="JPY">JPY</option>
+                <option value="GBP">GBP</option>
+                <option value="GBP">GBP</option>
+                <option value="CHF">CHF</option>
+                <option value="CAD">CAD</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="amount">Số tiền cần đổi:</label>
+            <input type="number" id="amount" placeholder="Nhập số tiền">
+        </div>
+        <div class="input-group">
+            <label for="targetCurrency">Loại tiền đích:</label>
+            <select id="targetCurrency">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="JPY">JPY</option>
+                <option value="GBP">GBP</option>
+                <option value="GBP">GBP</option>
+                <option value="CHF">CHF</option>
+                <option value="CAD">CAD</option>
+            </select>
+        </div>
+        <button id="convertButton">Đổi tiền</button>
+        <p id="result"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
