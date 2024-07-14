@@ -5,6 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(response => response.json())
         .then(data => {
             const table = document.createElement("table");
+            const loader = document.getElementById('loader');
+
+            loader.style.display = 'none';
+
             table.innerHTML = `
                 <thead>
                     <tr>
